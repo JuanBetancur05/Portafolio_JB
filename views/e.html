@@ -1,0 +1,51 @@
+                   <script>
+        async function cambiarIdioma(idioma) {
+            try {
+                const respuesta = await fetch(idioma === "es" ? "./assets/js/es.json" : "./assets/js/en.json");
+                const datos = await respuesta.json(); 
+          document.getElementById("proyectos3").innerText = datos.proyectos3;
+          document.getElementById("experiencia").innerText = datos.experiencia;
+          document.getElementById("contacto1").innerText = datos.contacto1;
+          document.getElementById("re").innerText = datos.re1;
+          document.getElementById("colaboraciones3").innerText = datos.colaboraciones3;
+          document.getElementById("experiencia3").innerText = datos.experiencia3;
+          document.getElementById("disponible3").innerText = datos.disponible3;
+          document.getElementById("fullstack3").innerText = datos.fullstack3;
+          document.getElementById("equipo3").innerText = datos.equipo3;
+          document.getElementById("liderazgo3").innerText = datos.liderazgo3;
+          document.getElementById("adaptabilidad3").innerText = datos.adaptabilidad3;
+          document.getElementById("herramientas3").innerText = datos.herramientas3;
+          document.getElementById("aprendizaje3").innerText = datos.aprendizaje3;
+          document.getElementById("agosto3").innerText = datos.agosto3;
+          document.getElementById("diciembre3").innerText = datos.diciembre3;
+          document.getElementById("marzo3").innerText = datos.marzo3;
+          document.getElementById("abril3").innerText = datos.abril3;
+          document.getElementById("enero3").innerText = datos.enero3;
+          document.getElementById("julio3").innerText = datos.julio3;
+          document.getElementById("descripcion3").innerHTML = datos.descripcion3; 
+          document.getElementById("mejora3").innerText = datos.mejora3;
+          document.getElementById("creacion3").innerText = datos.creacion3;
+          document.getElementById("contactame3").innerText = datos.contactame3;
+          document.getElementById("contacto3").innerText = datos.contacto3;
+          document.getElementById("habilidades3").innerText = datos.habilidades3;
+          document.getElementById("porque3").innerText = datos.porque3;
+          document.getElementById("continuo3").innerText = datos.continuo3;
+          document.getElementById("comunicacion3").innerText = datos.comunicacion3;
+          document.getElementById("trabajoequipo3").innerText = datos.trabajoequipo3;
+          document.getElementById("critico3").innerText = datos.critico3;
+          document.getElementById("actitud3").innerText = datos.actitud3;
+          document.getElementById("creativa3").innerText = datos.creativa3;
+            } catch (error) {
+                console.error("Error al cargar el archivo JSON", error);
+            }
+        }
+    
+
+        document.getElementById("btn-es").addEventListener("click", function() {
+            cambiarIdioma("es");
+        });
+    
+        document.getElementById("btn-en").addEventListener("click", function() {
+            cambiarIdioma("en");
+        });
+    </script>
